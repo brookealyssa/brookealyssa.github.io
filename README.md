@@ -1,2 +1,2 @@
 # brookealyssa.github.io
-CIS 300 repository
+This repository contains files for CIS300 Project Assignments.
