@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Kuffel & Co.</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.site-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <ul>
+        <li><a href="products.html" class="active">PRODUCTS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li class="logo"><a href="index.html">K</a></li>
+        <li><a href="processes.html">PROCESSES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Product categories -->
+  <main class="products">
+    <section class="category">
+      <h2>Bath & Body</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="images/soap1.jpg" alt="Handmade soap">
+          <h3>Botanical Soap Bar</h3>
+          <p>Cold-processed soap made with essential oils and natural clays.</p>
+        </div>
+        <div class="card">
+          <img src="images/scrub1.jpg" alt="Herbal body scrub">
+          <h3>Herbal Body Scrub</h3>
+          <p>Exfoliating blend of sea salt, herbs, and nourishing oils.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Paper Goods</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="images/paper1.jpg" alt="Recycled paper set">
+          <h3>Recycled Paper Set</h3>
+          <p>Handcrafted from reclaimed fibers for journaling or wrapping.</p>
+        </div>
+        <div class="card">
+          <img src="images/tags1.jpg" alt="Gift tags">
+          <h3>Pressed Flower Gift Tags</h3>
+          <p>Unique details for gifts, made from leftover paper cuttings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Dry Goods</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="images/dry1.jpg" alt="Dried citrus slices">
+          <h3>Dried Citrus Slices</h3>
+          <p>Perfect for teas, baking, or simple home décor.</p>
+        </div>
+        <div class="card">
+          <img src="images/herbs1.jpg" alt="Herbal sachets">
+          <h3>Herbal Sachets</h3>
+          <p>Natural aroma for drawers or closets, made from dried botanicals.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-logo">K</div>
+    <div class="footer-links">
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="processes.html">Processes</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <form class="footer-form">
+      <label for="email">Stay Updated:</label>
+      <input type="email" id="email" placeholder="Your email" />
+      <button type="submit">Subscribe</button>
+    </form>
+  </footer>
+</body>
+</html>

@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kuffel & Co.</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.site-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -12,11 +22,11 @@
   <header class="site-header">
     <nav class="nav">
       <ul>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">About</a></li>
-        <li class="logo">K</li>
-        <li><a href="#">Processes</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li class="logo"><a href="index.html">K</a></li>
+        <li><a href="#">PROCESSES</a></li>
+        <li><a href="#">CONTACT</a></li>
       </ul>
     </nav>
   </header>
@@ -30,27 +40,31 @@
     </div>
   </section>
 
-  <!-- Product highlights -->
-  <section class="highlights">
-    <h2>Our Products</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Product 1">
-        <h3>Paper</h3>
-        <p>Handmade recycled papers for gifts, crafts, and décor.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Product 2">
-        <h3>Bath & Body</h3>
-        <p>Soaps and scrubs made from natural ingredients.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Product 3">
-        <h3>More Coming Soon</h3>
-        <p>Expanding our line with thoughtful, organic creations.</p>
-      </div>
+<!-- Seasonal Collection Highlight -->
+<section class="highlights harvest">
+  <h2>The Harvest Collection</h2>
+  <p class="collection-intro">A limited-edition trio celebrating the rituals of fall — handcrafted for warmth, nostalgia, and a hint of the uncanny.</p>
+
+  <div class="cards">
+    <div class="card">
+      <img src="SpicedPumpkin.png" alt="Spiced Pumpkin + Chai Soap">
+      <h3>Spiced Pumpkin + Chai</h3>
+      <p>Comfort in every lather — real pumpkin, oat milk, and warm spices blended for a creamy autumn indulgence.</p>
     </div>
-  </section>
+
+    <div class="card">
+      <img src="ApplewoodSmoke.jpg" alt="Applewood Smoke Soap">
+      <h3>Applewood Smoke</h3>
+      <p>Crisp apple meets cedarwood and smoky vetiver — the scent of sweater weather and orchard bonfires.</p>
+    </div>
+
+    <div class="card">
+      <img src="MidnightHarvest.jpg" alt="Midnight Harvest Soap">
+      <h3>Midnight Harvest</h3>
+      <p>Black fig, amber, and sage create an enchanting aroma for cool autumn nights — dark, floral, and mysterious.</p>
+    </div>
+  </div>
+</section>
 
   <!-- About + CTA -->
   <section class="about">
