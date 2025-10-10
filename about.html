@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn how Kuffel & Co. began with Brooklyn and Michael Kuffel’s passion for creating beautiful, 
+    sustainable products by hand. Discover the story behind our artisan brand." />
+  <meta name="keywords" content="Kuffel & Co story, Brooklyn Kuffel, Michael Kuffel, small business, handmade products, artisan brand, sustainable living, creative business, handcrafted goods" />
+  <title>About | Kuffel & Co.</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.site-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav">
+      <ul>
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="about.html" class="active">ABOUT</a></li>
+        <li class="logo"><a href="index.html">K</a></li>
+        <li><a href="processes.html">PROCESSES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header about-header">
+    <h1>Our Story</h1>
+    <p>Handcrafted beginnings, lasting inspiration.</p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="about-page">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>How It All Began</h2>
+        <p>
+          Kuffel & Co. began as a creative outlet for <strong>Brooklyn Kuffel</strong>, a physics student with a love for art, aesthetics, and hands-on creation. 
+          What started as a simple hobby, making small batches of soaps and other goods at home, quickly grew into something more. 
+          Guided by curiosity and a desire to blend beauty with function, Brooklyn refined her methods, embraced sustainable practices, and crafted recipes that delighted friends and family alike.
+        </p>
+
+        <p>
+          Encouraged by growing demand, Brooklyn’s passion project soon blossomed into a small business. Her husband, <strong>Michael Kuffel</strong> (ever her greatest supporter) joined the venture, bringing his eye for precision and creativity to every product. Together, they’ve cultivated a brand that reflects both artistry and authenticity.
+        </p>
+
+        <p>
+          Today, Kuffel & Co. strives to create high-quality, handcrafted goods that bring joy and a sense of calm to everyday rituals — small luxuries that spark that instant <em>“dopamine hit”</em> from something beautiful and thoughtfully made.
+        </p>
+
+        <p>
+          Follow along and see more behind the scenes on 
+          <a href="https://www.instagram.com/brobrooklynn/" target="_blank">Instagram</a>.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img src="Kuffel.png" alt="Brooklyn and Michael Kuffel" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-logo">K</div>
+    <div class="footer-links">
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="#">Processes</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <form class="footer-form">
+      <label for="email">Stay Updated:</label>
+      <input type="email" id="email" placeholder="Your email" />
+      <button type="submit">Subscribe</button>
+    </form>
+  </footer>
+</body>
+</html>

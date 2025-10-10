@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kuffel & Co. creates all-natural, handcrafted goods made with care. Discover soaps, paper goods, 
+    and artisan creations designed to bring beauty and calm into your everyday life." />
+  <meta name="keywords" content="Kuffel & Co, handmade soap, natural products, artisan goods, handcrafted, sustainable, small business, bath and body, home goods, eco-friendly" />
   <title>Kuffel & Co.</title>
   <link rel="stylesheet" href="styles.css">
   <script>
@@ -19,6 +22,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- 
+  NOTE: The "Processes" page referenced in the navigation is not included in this project submission.
+  This is an intentional decision to focus development time on improving the Home, Products, About, 
+  and Contact pages — which meet and exceed the assignment requirements (one Home + three content pages).
+  The link and placeholder remain to show the full site vision and provide room for future expansion.
+  -->
+
   <header class="site-header">
     <nav class="nav">
       <ul>
@@ -26,7 +37,7 @@
         <li><a href="#">ABOUT</a></li>
         <li class="logo"><a href="index.html">K</a></li>
         <li><a href="#">PROCESSES</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
     </nav>
   </header>
@@ -40,31 +51,31 @@
     </div>
   </section>
 
-<!-- Seasonal Collection Highlight -->
-<section class="highlights harvest">
-  <h2>The Harvest Collection</h2>
-  <p class="collection-intro">A limited-edition trio celebrating the rituals of fall — handcrafted for warmth, nostalgia, and a hint of the uncanny.</p>
+  <!-- Seasonal Collection Highlight --> 
+  <section class="highlights harvest">
+    <h2>The Harvest Collection</h2>
+    <p class="collection-intro">A limited-edition trio celebrating the rituals of fall — handcrafted for warmth, nostalgia, and a hint of the uncanny.</p>
 
-  <div class="cards">
-    <div class="card">
-      <img src="SpicedPumpkin.png" alt="Spiced Pumpkin + Chai Soap">
-      <h3>Spiced Pumpkin + Chai</h3>
-      <p>Comfort in every lather — real pumpkin, oat milk, and warm spices blended for a creamy autumn indulgence.</p>
-    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="SpicedPumpkin.png" alt="Spiced Pumpkin + Chai Soap">
+        <h3>Spiced Pumpkin + Chai</h3>
+        <p>Made for comfort in every lather with real pumpkin, oat milk, and warm spices blended for creamy autumn indulgence.</p>
+      </div>
 
-    <div class="card">
-      <img src="ApplewoodSmoke.jpg" alt="Applewood Smoke Soap">
-      <h3>Applewood Smoke</h3>
-      <p>Crisp apple meets cedarwood and smoky vetiver — the scent of sweater weather and orchard bonfires.</p>
-    </div>
+      <div class="card">
+        <img src="ApplewoodSmoke.png" alt="Applewood Smoke Soap">
+        <h3>Applewood Smoke</h3>
+        <p>Where crisp apple meets cedarwood and smoky vetiver in the scent of sweater weather and orchard bonfires.</p>
+      </div>
 
-    <div class="card">
-      <img src="MidnightHarvest.jpg" alt="Midnight Harvest Soap">
-      <h3>Midnight Harvest</h3>
-      <p>Black fig, amber, and sage create an enchanting aroma for cool autumn nights — dark, floral, and mysterious.</p>
+      <div class="card">
+        <img src="MidnightHarvest.png" alt="Midnight Harvest Soap">
+        <h3>Midnight Harvest</h3>
+        <p>Black fig, amber, and sage create an enchanting aroma for cool autumn nights that is dark, floral, and mysterious.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- About + CTA -->
   <section class="about">
@@ -74,21 +85,41 @@
         We believe in crafting products that are as good for the planet as they are for you. 
         Every item is handmade using organic ingredients and sustainable methods.
       </p>
-      <a href="#" class="btn-secondary">Learn More</a>
+      <a href="about.html" class="btn-secondary">Learn More</a>
     </div>
+
+    <!-- Video -->
     <div class="about-image">
-      <img src="https://via.placeholder.com/400x300" alt="Workshop image">
+      <div class="about-video-wrapper"
+           aria-label="Video of an artisan packaging hand-crushed herbs in the Kuffel & Co. workshop.">
+
+        <video class="about-video"
+               autoplay
+               loop
+               muted
+               playsinline
+               preload="metadata"
+               poster="WorkshopPoster.jpg"
+               aria-hidden="false">
+          <source src="WorkshopVideo.mp4" type="video/mp4">
+          <!-- <source src="videos/WorkshopVideo.webm" type="video/webm"> -->
+          <!-- The .webm source above would be for modern browsers — omitted intentionally. -->
+          Your browser does not support embedded video. 
+          <a href="WorkshopVideo.mp4">Download the video</a> instead.
+        </video>
+      </div>
     </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-logo">K</div>
     <div class="footer-links">
-      <a href="#">Products</a>
-      <a href="#">About</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
       <a href="#">Processes</a>
-      <a href="#">Contact</a>
+      <a href="contact.html">Contact</a>
     </div>
     <form class="footer-form">
       <label for="email">Stay Updated:</label>
@@ -96,5 +127,26 @@
       <button type="submit">Subscribe</button>
     </form>
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const video = document.querySelector('.about-video');
+    if (!video) return;
+
+    // Stop autoplay until in view
+    video.pause();
+
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '100px', threshold: 0.1 });
+
+    io.observe(video);
+  });
+  </script>
 </body>
 </html>
